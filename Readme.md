@@ -16,6 +16,12 @@ shadowsocks-libev-debian.sh
 - Description: Auto Install Shadowsocks(libev) Server for Debian/Ubuntu
 - Intro: https://teddysun.com/358.html
 
+```
+wget --no-check-certificate https://raw.githubusercontent.com/s7lx/shadowsocks_install/master/shadowsocks-libev-debian.sh
+
+chmod +x shadowsocks-libev-debian.sh
+```
+
 shadowsocks-go.sh
 ===============
 - Description: Auto Install Shadowsocks(Go) Server for CentOS/Debian/Ubuntu
@@ -42,3 +48,5 @@ haproxy.sh
 - Intro: https://shadowsocks.be/10.html
 
 Copyright (C) 2014-2017 Teddysun <i@teddysun.com>
+
+
