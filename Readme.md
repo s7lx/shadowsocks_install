@@ -18,8 +18,8 @@ shadowsocks-libev-debian.sh
 
 ```
 wget --no-check-certificate https://raw.githubusercontent.com/s7lx/shadowsocks_install/master/shadowsocks-libev-debian.sh
-
 chmod +x shadowsocks-libev-debian.sh
+./shadowsocks-libev-debian.sh
 ```
 
 shadowsocks-go.sh
