@@ -204,41 +204,41 @@ pre_install(){
     fi
 
     #Set shadowsocks-libev config password
-    echo "Please input password for shadowsocks-libev:"
-    read -p "(Default password: teddysun.com):" shadowsockspwd
-    [ -z "${shadowsockspwd}" ] && shadowsockspwd="teddysun.com"
-    echo
-    echo "---------------------------"
-    echo "password = ${shadowsockspwd}"
-    echo "---------------------------"
-    echo
+#    echo "Please input password for shadowsocks-libev:"
+#    read -p "(Default password: teddysun.com):" shadowsockspwd
+#    [ -z "${shadowsockspwd}" ] && shadowsockspwd="teddysun.com"
+#    echo
+#    echo "---------------------------"
+#    echo "password = ${shadowsockspwd}"
+#    echo "---------------------------"
+#    echo
 
     #Set shadowsocks-libev config port
-    while true
-    do
-    echo -e "Please input port for shadowsocks-libev [1-65535]:"
-    read -p "(Default port: 8989):" shadowsocksport
-    [ -z "$shadowsocksport" ] && shadowsocksport="8989"
-    expr ${shadowsocksport} + 0 &>/dev/null
-    if [ $? -eq 0 ]; then
-        if [ ${shadowsocksport} -ge 1 ] && [ ${shadowsocksport} -le 65535 ]; then
-            echo
-            echo "---------------------------"
-            echo "port = ${shadowsocksport}"
-            echo "---------------------------"
-            echo
-            break
-        else
-            echo "Input error, please input correct number"
-        fi
-    else
-        echo "Input error, please input correct numbers"
-    fi
-    done
+#    while true
+#    do
+#    echo -e "Please input port for shadowsocks-libev [1-65535]:"
+#    read -p "(Default port: 8989):" shadowsocksport
+#    [ -z "$shadowsocksport" ] && shadowsocksport="8989"
+#    expr ${shadowsocksport} + 0 &>/dev/null
+#    if [ $? -eq 0 ]; then
+#        if [ ${shadowsocksport} -ge 1 ] && [ ${shadowsocksport} -le 65535 ]; then
+#            echo
+#            echo "---------------------------"
+#            echo "port = ${shadowsocksport}"
+#            echo "---------------------------"
+#            echo
+#            break
+#        else
+#            echo "Input error, please input correct number"
+#        fi
+#    else
+#        echo "Input error, please input correct numbers"
+#    fi
+#    done
 
-    echo
-    echo "Press any key to start...or press Ctrl+C to cancel"
-    char=`get_char`
+#   echo
+#    echo "Press any key to start...or press Ctrl+C to cancel"
+#    char=`get_char`
 
     # Check jessie in source.list
     if debianversion 7; then
