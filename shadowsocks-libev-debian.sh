@@ -276,7 +276,7 @@ download_files(){
 #    if ! wget --no-check-certificate -O /etc/init.d/shadowsocks ${init_script_link}; then
 #        echo "Failed to download shadowsocks-libev init script!"
 #        exit 1
-    fi
+#    fi
 }
 
 # Config shadowsocks
