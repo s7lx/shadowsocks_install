@@ -123,6 +123,9 @@ check_sys(){
     elif cat /etc/issue | grep -Eqi "debian"; then
         release="debian"
         systemPackage="apt"
+    elif cat /etc/issue | grep -Eqi "raspbian"; then
+        release="debian"
+        systemPackage="apt"
     elif cat /etc/issue | grep -Eqi "ubuntu"; then
         release="ubuntu"
         systemPackage="apt"
@@ -270,9 +273,9 @@ download_files(){
     fi
 
     # Download init script
-    if ! wget --no-check-certificate -O /etc/init.d/shadowsocks ${init_script_link}; then
-        echo "Failed to download shadowsocks-libev init script!"
-        exit 1
+#    if ! wget --no-check-certificate -O /etc/init.d/shadowsocks ${init_script_link}; then
+#        echo "Failed to download shadowsocks-libev init script!"
+#        exit 1
     fi
 }
 
@@ -352,12 +355,12 @@ install_shadowsocks(){
     clear
     echo
     echo "Congratulations, Shadowsocks-libev install completed!"
-    echo -e "Your Server IP: \033[41;37m $(get_ip) \033[0m"
-    echo -e "Your Server Port: \033[41;37m ${shadowsocksport} \033[0m"
-    echo -e "Your Password: \033[41;37m ${shadowsockspwd} \033[0m"
-    echo -e "Your Local IP: \033[41;37m 127.0.0.1 \033[0m"
-    echo -e "Your Local Port: \033[41;37m 1080 \033[0m"
-    echo -e "Your Encryption Method: \033[41;37m aes-256-cfb \033[0m"
+#   echo -e "Your Server IP: \033[41;37m $(get_ip) \033[0m"
+#   echo -e "Your Server Port: \033[41;37m ${shadowsocksport} \033[0m"
+#   echo -e "Your Password: \033[41;37m ${shadowsockspwd} \033[0m"
+#   echo -e "Your Local IP: \033[41;37m 127.0.0.1 \033[0m"
+#   echo -e "Your Local Port: \033[41;37m 1080 \033[0m"
+#   echo -e "Your Encryption Method: \033[41;37m aes-256-cfb \033[0m"
     echo
     echo "Welcome to visit:https://teddysun.com/358.html"
     echo "Enjoy it!"
@@ -370,7 +373,7 @@ install_shadowsocks_libev(){
     disable_selinux
     pre_install
     download_files
-    config_shadowsocks
+#    config_shadowsocks
     install_shadowsocks
 }
 
