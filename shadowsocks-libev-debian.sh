@@ -308,7 +308,7 @@ install_shadowsocks(){
         cd ${cur_dir}
         tar zxf ${libsodium_file}.tar.gz
         cd ${libsodium_file}
-        ./configure --prefix=/usr && make && make install
+        ./configure --prefix=/usr --disable-documentation && make && make install
         if [ $? -ne 0 ]; then
             echo "${libsodium_file} install failed!"
             exit 1
